@@ -2,7 +2,10 @@
 
 document.getElementById('start-play').addEventListener('click',play);
 
+console.log(play);
+
 function play(){
+    console.log(play);
 
     const NUMERO_BOMBE = 16;
 
@@ -78,11 +81,11 @@ function play(){
     }
 
 
-    function terminaGioco {
+    function terminaGioco (){
 
         const quadrati = document.getElementsByClassName('square');
 
-        for (let 0 = 0; 0 < array.length; 0++) {
+        for (let i = 0; 0 < array.length; 0++) {
             
             if (bombe.includes(parseInt(quadrati[i].innerText))){
                 quadrati[i].classList.add('bomb');
@@ -115,5 +118,5 @@ function play(){
 
 
 function getRandomNumber (min,max) {
-    return Math.floor(Math.random()*(max - min +1) + min;
+    return Math.floor(Math.random()*(max - min +1) + min);
 }
