@@ -81,22 +81,22 @@ function play(){
     }
 
 
-    function terminaGioco (){
+    function terminaGioco (arrayDiTentativi){
 
         const quadrati = document.getElementsByClassName('square');
 
-        for (let i = 0; 0 < array.length; 0++) {
+        for (let i = 0; i <= quadrati.length ; i++) {
             
             if (bombe.includes(parseInt(quadrati[i].innerText))){
                 quadrati[i].classList.add('bomb');
             }
 
-            //qua dovei rimuovere l'ascoltatore di eventi su quadrati[i]
 
-            //e stampo la lunghezza di tentativi
-            
+            quadrati[i].removeEventListener('click', handleCellClick);
         }
     }
+
+    alert("sei riuscito a sminare ", arrayDiTentativi.length ,"celle");
 
     //! GENERA LE BOMBE CASUALI NELLA GRIGLIA
     

@@ -59,7 +59,7 @@ main {
     width: calc(100% / 8);
     height: calc(100% / 8);
     border: 1px solid #fff;
-    
+    display: inline-block;
 }
 
 .clicked {
